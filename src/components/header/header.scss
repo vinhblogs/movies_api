@@ -1,35 +1,36 @@
-@use "../../scss" as *;
+@use "../../scss/" as *;
 
-.logo{
+.logo {
     font-size: 2.5rem;
     font-weight: 600;
 
-    @include flex(center,unset);
+    @include flex(center, unset);
 
-    img{
+    img {
         margin-right: 10px;
         width: 50px;
 
-        @include mobile{
-            width:30px;
+        @include mobile {
+            width: 30px;
             margin-right: 0;
         }
     }
 }
 
-.header{
+.header {
     height: $header-height;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 99;
     transition: height 0.3s ease, background-color 0.3s ease;
 
-    &.shrink{
-        height:$header-shrink-height;
+    &.shrink {
+        height: $header-shrink-height;
         background-color: $body-bg;
     }
+
     &__wrap {
         @include flex(center, space-between);
         height: 100%;
